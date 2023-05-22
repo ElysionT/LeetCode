@@ -1,4 +1,4 @@
-package org.demo;
+package org.demo.difficulty;
 
 import java.io.BufferedReader;
 import java.io.File;
