@@ -1,5 +1,7 @@
 package org.demo.medium;
 
+import org.demo.TreeNode;
+
 /**
  * 1302. 层数最深叶子节点的和
  * 
@@ -19,26 +21,7 @@ package org.demo.medium;
  *
  * https://leetcode.cn/problems/deepest-leaves-sum/
  */
-public class Q1302 {
-	static class TreeNode {
-		int val;
-		TreeNode left;
-		TreeNode right;
-
-		TreeNode() {
-		}
-
-		TreeNode(int val) {
-			this.val = val;
-		}
-
-		TreeNode(int val, TreeNode left, TreeNode right) {
-			this.val = val;
-			this.left = left;
-			this.right = right;
-		}
-	}
-	
+public class Q1302 {	
 	static class Solution {
 	    int deepest = 0;
 	    int result = 0;

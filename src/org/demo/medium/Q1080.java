@@ -1,5 +1,7 @@
 package org.demo.medium;
 
+import org.demo.TreeNode;
+
 /**
  * 1080. 根到叶路径上的不足节点
  * 
@@ -22,13 +24,20 @@ package org.demo.medium;
  * 提示：
  * 树中节点数目在范围 [1, 5000] 内
  * -105 <= Node.val <= 105
- * -109 <= limit <= 109 
+ * -109 <= limit <= 109  
  *
  */
 public class Q1080 {
 
+	public TreeNode sufficientSubset(TreeNode root, int limit) {
+		
+		return null;
+	}
+
+
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		Integer[] nodeValues = new Integer[]{1,2,3,4,-99,-99,7,8,9,-99,-99,12,13,-99,14};
+		TreeNode root = TreeNode.sInitBinaryTree(nodeValues);
 
 	}
 
