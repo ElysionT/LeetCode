@@ -57,12 +57,14 @@ public class Preorder {
 	}
 
 	public static void main(String[] args) {
-//		Integer[] nodes = new Integer[] { 1, null, 2, null, null, 3 };
-//		Integer[] nodes = new Integer[] {};
-//		Integer[] nodes = new Integer[] { 1 };
-//		Integer[] nodes = new Integer[] { 1, 2 };
-//		Integer[] nodes = new Integer[] { 1, null, 2 };
-		Integer[] nodes = new Integer[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 };
+		// Integer[] nodes = new Integer[] { 1, null, 2, null, null, 3 };
+		// Integer[] nodes = new Integer[] {};
+		// Integer[] nodes = new Integer[] { 1 };
+		// Integer[] nodes = new Integer[] { 1, 2 };
+		// Integer[] nodes = new Integer[] { 1, null, 2 };
+		// Integer[] nodes = new Integer[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
+		// 14, 15 };
+		Integer[] nodes = new Integer[] { 3, 5, 1, 6, 2, 0, 8, null, null, 7, 4 };
 		TreeNode root = TreeNode.sInitBinaryTree(nodes);
 
 		Preorder preorder = new Preorder();
