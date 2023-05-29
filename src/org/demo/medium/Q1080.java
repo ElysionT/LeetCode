@@ -1,5 +1,7 @@
 package org.demo.medium;
 
+import java.util.Arrays;
+
 import org.demo.TreeNode;
 
 /**
@@ -29,16 +31,50 @@ import org.demo.TreeNode;
  */
 public class Q1080 {
 
+	private int mLimit;
+
 	public TreeNode sufficientSubset(TreeNode root, int limit) {
-		
-		return null;
+		mLimit = limit;
+
+		if (!sufficientSubsetInernal(root, 0))
+			return null;
+
+		return root;
 	}
 
+	private boolean sufficientSubsetInernal(TreeNode node, int parentSum) {
+		if (null == node)
+			return false;
+
+		int sum = parentSum + node.val;
+		if (null == node.left && null == node.right) {
+			return sum >= mLimit;
+		}
+
+		boolean leftCheck = sufficientSubsetInernal(node.left, sum);
+		if (!leftCheck) {
+			node.left = null;
+		}
+		boolean rightCheck = sufficientSubsetInernal(node.right, sum);
+		if (!rightCheck) {
+			node.right = null;
+		}
+		return leftCheck || rightCheck;
+	}
 
 	public static void main(String[] args) {
-		Integer[] nodeValues = new Integer[]{1,2,3,4,-99,-99,7,8,9,-99,-99,12,13,-99,14};
-		TreeNode root = TreeNode.sInitBinaryTree(nodeValues);
+		Integer[] nodeValues = new Integer[] { 1, 2, 3, 4, -99, -99, 7, 8, 9, -99, -99, 12, 13, -99, 14 };
+		int limit = 1;
+		// Integer[] nodeValues = new Integer[] { 5, 4, 8, 11, null, 17, 4, 7, 1, null, null, 5, 3 };
+		// int limit = 22;
+		// Integer[] nodeValues = new Integer[] { 1, 2, -3, -5, null, 4, null };
+		// int limit = -1;
 
+		TreeNode root = TreeNode.sInitBinaryTree2(nodeValues);
+		Q1080 solution = new Q1080();
+		System.out.println("nodeValues:" + Arrays.toString(nodeValues) + ", limit:" + limit);
+		TreeNode result = solution.sufficientSubset(root, limit);
+		System.out.print("result:");
+		TreeNode.sPrintTree(result);
 	}
-
 }

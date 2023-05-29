@@ -49,6 +49,7 @@ public class TreeNode {
 				sInitBinaryTreeInternal(nodeValues, 2 * index + 2));
 	}
 
+	// Test: Integer[] nodes = new Integer[] { 1, 2, 3, null, null, 4, 5, 6 };
 	public static TreeNode sInitBinaryTree2(Integer[] nodeValues) {
 		int length = nodeValues.length;
 		if (0 == length)
@@ -79,12 +80,13 @@ public class TreeNode {
 
 		}
 
-//		sInitBinaryTreeInternal2(nodeValues, parentNodes, 1);
+		// sInitBinaryTreeInternal2(nodeValues, parentNodes, 1);
 
 		// TODO: Log root
 		return root;
 	}
 
+	// java.lang.StackOverflowError
 	private static void sInitBinaryTreeInternal2(Integer[] nodeValues, List<TreeNode> parentNodes, int index) {
 		// System.out.println(
 		// "nodeValues:" + Arrays.toString(nodeValues) + ", parentNodes:" + parentNodes
@@ -158,5 +160,30 @@ public class TreeNode {
 			result.addAll(result_);
 			sPrintTreeInternal(result, nextLevelNodes);
 		}
+	}
+
+	public static void sPrintTree2(TreeNode root) {
+		final List<Integer> result = new ArrayList<>();
+		final List<TreeNode> nextLevelNodes = new ArrayList<>(1);
+		nextLevelNodes.add(root);
+
+		sPrintTreeInternal2(result, nextLevelNodes);
+		System.out.println("Tree:" + Arrays.toString(result.toArray(new Integer[] {})));
+	}
+
+	private static void sPrintTreeInternal2(List<Integer> result, List<TreeNode> levelNodes) {
+
+		TreeNode node = null;
+		while (levelNodes.size() > 0) {
+			node = levelNodes.remove(0);
+			if (null == node) {
+				result.add(null);
+			} else {
+				result.add(node.val);
+				levelNodes.add(node.left);
+				levelNodes.add(node.right);
+			}
+		}
+
 	}
 }
