@@ -216,7 +216,7 @@ public class LowestCommonAncestor {
 		// int p = 0, q = 8;
 		// TreeNode root = TreeNode.sInitBinaryTree(nodes);
 
-		String[] stringArray = QUtils.getStringArrayFromFile("LowestCommonAncestor");
+		String[] stringArray = QUtils.getStringArrayFromFile("LowestCommonAncestor", ",");
 		final Integer[] nodes = new Integer[stringArray.length];
 		for (int i = 0, length = nodes.length; i < length; i++) {
 			String temp = stringArray[i];

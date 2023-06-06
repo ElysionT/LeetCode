@@ -18,7 +18,7 @@ public class QUtils {
 		System.out.println("]");
 	}
 
-	public static String[] getStringArrayFromFile(String fileaName) throws IOException {
+	public static String[] getStringArrayFromFile(String fileaName, String regex) throws IOException {
 		String dir = new File("").getAbsolutePath();
 		File file = new File(dir, fileaName);
 		System.out.println("File:" + file);
@@ -34,7 +34,7 @@ public class QUtils {
 			if (null != bufferedReader)
 				bufferedReader.close();
 		}
-		return numsString.split(",");
+		return numsString.split(regex);
 	}
 
 }
