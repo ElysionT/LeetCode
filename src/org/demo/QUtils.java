@@ -18,23 +18,27 @@ public class QUtils {
 		System.out.println("]");
 	}
 
-	public static String[] getStringArrayFromFile(String fileaName, String regex) throws IOException {
+	public static String[] getStringArrayFromFile(String fileName, String regex) throws IOException {
+		return getStringFromFile(fileName).split(regex);
+	}
+
+	public static String getStringFromFile(String fileName) throws IOException {
 		String dir = new File("").getAbsolutePath();
-		File file = new File(dir, fileaName);
+		File file = new File(dir, fileName);
 		System.out.println("File:" + file);
 		BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
-		String numsString = "";
+		String str = "";
 		try {
 			String temp;
 			while ((temp = bufferedReader.readLine()) != null) {
-				numsString += temp;
+				str += temp;
 			}
-			System.out.println(numsString);
+//			System.out.println(str);
 		} finally {
 			if (null != bufferedReader)
 				bufferedReader.close();
 		}
-		return numsString.split(regex);
+		return str;
 	}
 
 }

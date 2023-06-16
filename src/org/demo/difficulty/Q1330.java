@@ -6,6 +6,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Arrays;
 
+import org.demo.QUtils;
+
 /**
  * 1330. 翻转子数组得到最大的数组值
  * 给你一个整数数组 nums 。「数组值」定义为所有满足 0 <= i < nums.length-1 的 |nums[i]-nums[i+1]| 的和。
@@ -208,21 +210,7 @@ public class Q1330 {
 	}
 
 	public static void main(String[] args) throws IOException {
-		String dir = new File("").getAbsolutePath();
-		File file = new File(dir, "Q1330");
-		BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
-		String numsString = "";
-		try {
-			String temp;
-			while ((temp = bufferedReader.readLine()) != null) {
-				numsString += temp;
-			}
-			System.out.println(numsString);
-		} finally {
-			if (null != bufferedReader)
-				bufferedReader.close();
-		}
-		String[] tempArray = numsString.split(",");
+		String[] tempArray = QUtils.getStringArrayFromFile("Q1330", ",");
 		System.out.println("tempArray length:" + tempArray.length);
 		final int[] nums = new int[tempArray.length];
 		for (int i = 0, length = nums.length; i < length; i++) {
