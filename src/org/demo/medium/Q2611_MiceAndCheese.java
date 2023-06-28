@@ -35,7 +35,7 @@ import java.util.List;
  * 1 <= reward1[i], reward2[i] <= 1000
  * 0 <= k <= n
  */
-public class MiceAndCheese {
+public class Q2611_MiceAndCheese {
 	private static final boolean DEBUG = false;
 
 	public int miceAndCheese4(int[] reward1, int[] reward2, int k) {
@@ -340,7 +340,7 @@ public class MiceAndCheese {
 		int[] reward1_7 = { 1, 1, 4, 1, 2, 3 }, reward2_7 = { 1, 2, 4, 1, 3, 3 };
 		int k_7 = 4;
 
-		MiceAndCheese solution = new MiceAndCheese();
+		Q2611_MiceAndCheese solution = new Q2611_MiceAndCheese();
 		System.out.print("reward1_1:" + Arrays.toString(reward1_1));
 		System.out.print(", reward2_1:" + Arrays.toString(reward2_1));
 		System.out.println(", k_1:" + k_1);

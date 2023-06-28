@@ -19,7 +19,9 @@ public class QUtils {
 	}
 
 	public static String[] getStringArrayFromFile(String fileName, String regex) throws IOException {
-		return getStringFromFile(fileName).split(regex);
+		final String[] result = getStringFromFile(fileName).split(regex);
+		System.out.println("Length:" + result.length);
+		return result;
 	}
 
 	public static String getStringFromFile(String fileName) throws IOException {
@@ -33,7 +35,7 @@ public class QUtils {
 			while ((temp = bufferedReader.readLine()) != null) {
 				str += temp;
 			}
-//			System.out.println(str);
+			// System.out.println(str);
 		} finally {
 			if (null != bufferedReader)
 				bufferedReader.close();
