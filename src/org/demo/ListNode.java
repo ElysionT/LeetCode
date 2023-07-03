@@ -20,7 +20,7 @@ public class ListNode {
 	}
 
 	public static ListNode sInitListNode(int[] values) {
-		System.out.println("Values:" + Arrays.toString(values));
+//		System.out.println("Values:" + Arrays.toString(values));
 		int length = values.length;
 		if (0 == length)
 			return null;
