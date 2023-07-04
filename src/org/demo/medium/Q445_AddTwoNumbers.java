@@ -1,7 +1,6 @@
 package org.demo.medium;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import org.demo.ListNode;
@@ -33,6 +32,11 @@ import org.demo.ListNode;
 public class Q445_AddTwoNumbers {
 	private static final boolean DEBUG = false;
 
+	/*
+	 * 执行用时：2 ms, 在所有 Java 提交中击败了72.20%的用户
+	 * 内存消耗：41.8 MB, 在所有 Java 提交中击败了60.36%的用户
+	 * 通过测试用例：1563 / 1563
+	 */
 	public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 		List<Integer> l1List = new ArrayList<>();
 		do {
