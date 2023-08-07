@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 /**
  * 反转字符串
+ * https://leetcode.cn/problems/reverse-string/description/
  * https://leetcode.cn/leetbook/read/array-and-string/cacxi/
  * 
  * 编写一个函数，其作用是将输入的字符串反转过来。输入字符串以字符数组 s 的形式给出。
@@ -21,7 +22,7 @@ import java.util.Arrays;
  * 1 <= s.length <= 105
  * s[i] 都是 ASCII 码表中的可打印字符
  */
-public class ReverseString {
+public class Q344_ReverseString {
 
 	public void reverseString(char[] s) {
 		char temp;
@@ -39,7 +40,7 @@ public class ReverseString {
 		char[] s2 = { 'H', 'a', 'n', 'n', 'a', 'h' };
 
 		long start;
-		ReverseString solution = new ReverseString();
+		Q344_ReverseString solution = new Q344_ReverseString();
 
 		System.out.println("s1:" + Arrays.toString(s1));
 		start = System.currentTimeMillis();
