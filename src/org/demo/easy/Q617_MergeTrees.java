@@ -54,7 +54,7 @@ public class Q617_MergeTrees {
 		long start;
 		TreeNode result;
 
-		System.out.println("nodes1_1:" + Arrays.toString(nodes1_1) + "nodes2_1:" + Arrays.toString(nodes2_1));
+		System.out.println("nodes1_1:" + Arrays.toString(nodes1_1) + ", nodes2_1:" + Arrays.toString(nodes2_1));
 		TreeNode root1_1 = TreeNode.sInitBinaryTree(nodes1_1);
 		TreeNode root2_1 = TreeNode.sInitBinaryTree(nodes2_1);
 		System.out.print("root1_1:");
@@ -66,7 +66,7 @@ public class Q617_MergeTrees {
 		System.out.print("Time:" + (System.currentTimeMillis() - start) + ", [3,4,5,5,4,null,7] - Result:");
 		TreeNode.sPrintTree(result);
 		
-		System.out.println("nodes1_2:" + Arrays.toString(nodes1_2) + "nodes2_2:" + Arrays.toString(nodes2_2));
+		System.out.println("nodes1_2:" + Arrays.toString(nodes1_2) + ", nodes2_2:" + Arrays.toString(nodes2_2));
 		TreeNode root1_2 = TreeNode.sInitBinaryTree(nodes1_2);
 		TreeNode root2_2 = TreeNode.sInitBinaryTree(nodes2_2);
 		System.out.print("root1_2:");
